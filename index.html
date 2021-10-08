@@ -1,0 +1,172 @@
+<!DOCTYPE html> <!--элемент который помогает браузеру понять как следует интерпретировать страницу-->
+<html lang="en"> <!--Корневой элемент документа, показывает браузеру что дальше будет html-код, ему доступен глобальный атрибут для указания кода языка страницы-->
+<head> <!--в голове вся техническая информация о странице (инструкция по отображению и пользованию страницей)-->
+    <meta charset="UTF-8"> <!--При помощи тега meta можно указывать свойства метаданных, например кодировку-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Или указать в какой версии Eplorer должна отображаться страница-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Или задать видимую область страницы для пользователя-->
+    <meta name="description" content="Конспект html5book"> <!--Или описание сожержимого страницы-->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> <!--при помощи линк можно ссылаться на другие докумнеты, а при помощи атрибута rel указать отношения между ними. например установить фавикон -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML summary</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
+    <script> // эта штука позволяет писать скрипт (описание какой-то динамики на языке программирования) не в стороннем файле, а прям тут
+        //ниже описан небольшой скрипт для иллюстрации DOM-дерева этого документа
+        document.addEventListener("DOMContentLoaded",function() {
+            return generateTree(document.documentElement);
+        });
+        function generateTree(elem) {
+            let child = elem.firstElementChild;
+            let ul = document.createElement('ul');
+            while(child) {
+                let li = document.createElement('li');
+                    li.innerHTML = child.tagName;
+                    let list = generateTree(child);
+                    li.appendChild(list);
+                    ul.appendChild(li);
+                    child = child.nextElementSibling;
+            }
+            document.getElementById('here').appendChild(ul);
+            return ul;
+        };
+        </script>
+</head>
+<body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
+    <div class="nav">
+        <a href="#home">главная</a>
+        <a href="#chapters">содержание</a>
+        <a href="#">обо мне</a>
+        <a href="#">контакты</a>
+    </div>
+    <header>
+        <a name="home"></a>
+        <section class="container">
+        <div class="first_page content_main">
+            <img src="images/banner.png" alt="banner">
+            <div class="slogan">
+                <h1>HTML summary</h1>
+                <div>
+                    Привет, меня зовут Аня и это </br>
+                    мой коспект по HTML
+                </div>
+            </div>
+        </div>
+    </section>
+    </header>
+    <main>
+        <a name="chapters"></a>
+        <section class="container">
+        <h2>Содержание</h2>
+        <div class="content_main">
+            <table class="table_content">
+                <tbody>
+                    <tr>
+                        <td><a class="chapter" href="#chapter1">Глава 1</a></td>
+                        <td><a class="chapter" href="#chapter2">Глава 2</a></td>
+                        <td><a class="chapter" href="#">Глава 3</a></td>
+                        <td><a class="chapter" href="#">Глава 4</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 5</a></td>
+                        <td><a class="chapter" href="#">Глава 6</a></td>
+                        <td><a class="chapter" href="#">Глава 7</a></td>
+                        <td><a class="chapter" href="#">Глава 8</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 9</a></td>
+                        <td><a class="chapter" href="#">Глава 10</a></td>
+                        <td><a class="chapter" href="#">Глава 11</a></td>
+                        <td><a class="chapter" href="#">Глава 12</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 13</a></td>
+                        <td><a class="chapter" href="#">Глава 14</a></td>
+                        <td><a class="chapter" href="#">Глава 15</a></td>
+                        <td><a class="chapter" href="#">Глава 16</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <a name="chapter1"></a>
+    <section class="container" name='chapter1'>
+        <h2>Глава 1</h2>
+        <div class="content">
+            <div class="text">В главе 1 разбираются основы HTML: структура html-документа и основные элементы. Для иллюстрации мной был создан скрипт выводящий DOM-дерево этой страницы:</div>
+            <div id='here'></div>
+        </div>
+    </section>
+    <a name="chapter2"></a>
+    <section class="container">
+        <h2>Глава 2</h2>
+        <div class="content">
+            <div class="text">В главе 2 описаны основные теги HTML. Большинство из них использовались для создания этой страницы или описаны детальнее в других главах. Ниже представлены примеры тегов, обделенных вниманием: </div>
+            <div>
+                <ul class="examples_ch2">
+                    <li>
+                        <p>Тег &lt;abbr&gt;</p>
+                        <p><abbr title="Cascading Style Sheets">CSS</abbr> используется для стилизации <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                    </li>
+                    <li> <!--Почему-то не работает :( -->
+                        <p>Теги &lt;area&gt; и &lt;map&gt;</p>
+                        <img usemap="#Catsdogs" src="images/cat_dogs.png" alt="Картинка-пример к использованию тега" width="400" height="260">
+                        <map name="Catdogs">
+                            <area shape="rect" coords="60,88,200,230" href="https://www.friendforpet.ru/pets/cats" alt="Кошка" target="_blank">
+                            <area shape="rect" coords="201,1,326,230" href="https://www.friendforpet.ru/pets/dogs" alt="Собака" target="_blank">
+                        </map>
+                    </li>
+                    <li>
+                        <p>Теги &lt;b&gt; и &lt;i&gt; и &lt;del&gt;</p>
+                        <p>Это <b>жирно</b>, но не важно. Это <i>курсивно</i>, но все еще не важно</p>
+                        <p><del>Это тем более не важно</del></p>
+                    </li>
+                    <li>
+                        <p>Теги &lt;strong&gt; и &lt;em&gt;</p>
+                        <p>Это <strong>жирно</strong> и важно. Это <em>курсивно</em> и тоже важно</p>
+                    </li>
+                    <li>
+                        <p>Теги &lt;blockquote&gt; и &lt;cite&gt; и &lt;q&gt;</p>
+                        <blockquote><p>А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать</p></blockquote>
+                        <cite><p>В.В. Кличко</p></cite>
+                        <q>Поехали</q>
+                        <cite><p>Ю.А. Гагарин</p></cite>
+                    </li>
+                    <li>
+                        <p>Тег &lt;code&gt;</p>
+                        <p>&darr; С этого когда-то начинал каждый</p>
+                        <code>console.log("Hello world!")</code>
+                    </li>
+                    <li>
+                        <p>Тег &lt;hr&gt;</p>
+                        <p>&darr; Вместо border-bottom могла использовать это</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Тег &lt;iframe&gt;</p>
+                        <p>Можно вставлять другие документы (например дз, которое не хочешь доделать)</p>
+                        <iframe title="Inline Frame Example" width="900" height="500" src="images/KIS_MEOW(v2).pdf"></iframe>
+                    </li>
+                    <li>
+                        <p>Тег &lt;hr&gt;</p>
+                        <p>&darr; Вместо border-bottom могла использовать это</p>
+                        <hr>
+                    </li>
+                    <li>
+                        <p>Теги &lt;sub&gt; и &lt;sup&gt;</p>
+                        <p>Все, что я знаю из химии: H<sub>2</sub>O</p>
+                        <p>И из математики: 5<sup>2</sup> = 25</p>
+                    </li>
+                    <li>
+                        <p>Тег &lt;textarea&gt;</p>
+                        <p>&darr; Тут можно много писать</p>
+                        <textarea></textarea>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
