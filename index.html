@@ -89,12 +89,12 @@
                         <td><a class="chapter" href="#chapter1">Глава 1</a></td>
                         <td><a class="chapter" href="#chapter2">Глава 2</a></td>
                         <td><a class="chapter" href="#chapter3">Глава 3</a></td>
-                        <td><a class="chapter" href="#">Глава 4</a></td>
+                        <td><a class="chapter" href="#chapter4">Глава 4</a></td>
                     </tr>
                     <tr>
-                        <td><a class="chapter" href="#">Глава 5</a></td>
-                        <td><a class="chapter" href="#">Глава 6</a></td>
-                        <td><a class="chapter" href="#">Глава 7</a></td>
+                        <td><a class="chapter" href="#chapter5">Глава 5</a></td>
+                        <td><a class="chapter" href="#chapter6">Глава 6</a></td>
+                        <td><a class="chapter" href="#chapter7">Глава 7</a></td>
                         <td><a class="chapter" href="#">Глава 8</a></td>
                     </tr>
                     <tr>
@@ -132,14 +132,6 @@
                         <p>Тег &lt;abbr&gt;</p>
                         <p><abbr title="Cascading Style Sheets">CSS</abbr> используется для стилизации <abbr title="HyperText Markup Language">HTML</abbr>.</p>
                     </li>
-                    <li> <!--Почему-то не работает :( -->
-                        <p>Теги &lt;area&gt; и &lt;map&gt;</p>
-                        <img usemap="#Catsdogs" src="images/cat_dogs.png" alt="Картинка-пример к использованию тега" width="400" height="260">
-                        <map name="Catdogs">
-                            <area shape="rect" coords="60,88,200,230" href="https://www.friendforpet.ru/pets/cats" alt="Кошка" target="_blank">
-                            <area shape="rect" coords="201,1,326,230" href="https://www.friendforpet.ru/pets/dogs" alt="Собака" target="_blank">
-                        </map>
-                    </li>
                     <li>
                         <p>Теги &lt;b&gt; и &lt;i&gt; и &lt;del&gt;</p>
                         <p>Это <b>жирно</b>, но не важно. Это <i>курсивно</i>, но все еще не важно</p>
@@ -170,11 +162,6 @@
                         <p>Тег &lt;iframe&gt;</p>
                         <p>Можно вставлять другие документы (например дз, которое не хочешь доделать)</p>
                         <iframe title="Inline Frame Example" width="900" height="500" src="images/KIS_MEOW(v2).pdf"></iframe>
-                    </li>
-                    <li>
-                        <p>Тег &lt;hr&gt;</p>
-                        <p>&darr; Вместо border-bottom могла использовать это</p>
-                        <hr>
                     </li>
                     <li>
                         <p>Теги &lt;sub&gt; и &lt;sup&gt;</p>
@@ -227,6 +214,341 @@
                         <p lang="de"> &nbsp Wir verließen das Haus, als in allen Fenstern das Licht ausging</p>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter4"></a>
+    <section class="container">
+        <h2>Глава 4</h2>
+        <div class="content">
+            <div class="text">В главе 4 подробнее описаны возможности работы с текстом. Ниже пример их использования: </div>
+            <div class="examples_ch4">
+                <h3 style="padding-bottom: 10px;"><em>Компиляция программы</em><sup>1</sup></h3>
+                <p style="text-indent: 40px;">Компиляция программ на C# осуществляется компилятор <strong>csc.exe</strong> (C Sharp
+                Compiler). Как правило, при использовании Windows XP и .Net Framework v2.0, он
+                находится в папке <strong>c:\WINDOWS\Microsoft.NET\Framework\v2.0.50727</strong>. Этот путь при
+                установке .Net Framewrok 2 прописывается в переменную среды net. То есть компилятор
+                можно вызвать следующим образом <strong>%net%\csc.exe</strong>. Компилятор обладает множеством
+                параметров. Укажем только один основной наиболее часто применяемый.</p>
+                <ul>
+                    <li title="тип файла – консольное приложение"><code><b>/t:exe</b></code></li>
+                    <li title="тип файла –Windows приложение"><code><b>/t:winexe</b></code></li>
+                    <li title="тип файла – динамическая библиотека"><code><b>/t:library</b></code></li>
+                    <li title="тип файла – программный модуль"><code><b>/t:module</b></code></li>
+                </ul>
+                
+                <p style="text-indent: 40px;">Параметр <code><b>/t:exe</b></code> берется по умолчанию. То есть, чтобы получить из нашего
+                файла исполняемую программу, необходимо ввести следующую команду <strong>%net%\csc hello.cs</strong>, получим файл <strong>hello.exe</strong>.</p>
+                <hr>
+                <small>1. Кусочек из методички по C#</small>
+            </div>
+        </div>
+    </section>
+    <a name="chapter5"></a>
+    <section class="container">
+        <h2>Глава 5</h2>
+        <div class="content">
+            <div class="text">Глава 5 посвещена ссылкам и всему, что с ними связано. Ниже примеры использования ссылок: </div>
+            <div>
+                <ul class="examples_ch5">
+                    <li>
+                        <p>Гипперссылка для почты</p>
+                        <a href="mailto: avorohorp@gmail.com">Напиши мне письмо</a>
+                    </li>
+                    <li>
+                        <p>Гипперссылка на другой сайт (использование абсолютного пути)</p>
+                        <a href="https://html5book.ru/html-html5/" target="_blank">Сделай свой конспект</a>
+                    </li>
+                    <li>
+                        <p>Ссылка-якорь</p>
+                        <a href="#chapters">Содержание этого конспекта сделано при помощи якорей</a>
+                    </li>
+                    <li>
+                        <p>Ссылка-изображение</p>
+                        <p>Мое любимое видео про то, как стоит учить английский</p>
+                        <a href="https://www.youtube.com/watch?v=Ge7c7otG2mk" target="_blank"><img height="50px" width="55px" src="images/youtube.png" alt="иконка Youtube"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter6"></a>
+    <section class="container">
+        <h2>Глава 6</h2>
+        <div class="content">
+            <div class="text">В главе 6 рассказано про использование картинок и про создание изображения-карты. Ниже пример изображения карты: </div>
+            <div>
+                <p style="padding-bottom: 20px;">фронтендер-дурак, ничего не работает...</p>
+                <img usemap="#Catsdogs" src="images/cat_dogs.png" alt="Картинка-пример" width="400" height="260">
+                <map name="Catdogs">
+                    <area shape="rect" coords="60,88,200,230" href="https://www.friendforpet.ru/pets/cats" alt="Кошка" target="_blank">
+                    <area shape="rect" coords="201,1,326,230" href="https://www.friendforpet.ru/pets/dogs" alt="Собака" target="_blank">
+                </map>                       
+            </div>
+        </div>
+    </section>
+    <a name="chapter7"></a>
+    <section class="container">
+        <h2>Глава 7</h2>
+        <div class="content">
+            <div class="text">В главе 7 описано создание таблиц. Ниже создание таблиц продемострировано на примере моего университетского расписания: </div>
+            <div class="examples_ch7">
+                <div>
+                <table class="table_example">
+                    <tbody>
+                    <tr>
+                        <td rowspan="9" width="30px"><strong>ПН</strong></td>
+                    </tr>
+                    <tr>
+                        <td width="20%">Время</td>
+                        <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                        <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                    </tr>
+                        <tr>
+                            <td>08:30 - 10:05</td>
+                            <td></td><td></td>                    
+                        </tr>
+                        <tr>
+                            <td>10:15 - 11:50</td>
+                            <td></td><td></td>                    
+                        </tr>
+                        <tr>
+                            <td>12:00 - 13:35</td>
+    <td colspan="2"><i></i> <span>Самостоятельная работа</span> <i></i> <i></i></td>                    </tr>
+                        <tr>
+                            <td>13:50 - 15:25</td>
+                            <td></td><td></td>                    
+                        </tr>
+                        <tr>
+                            <td>15:40 - 17:15</td>
+                            <td></td><td></td>                    
+                        </tr>
+                        <tr>
+                            <td>17:25 - 19:00</td>
+                            <td></td><td></td>                    
+                        </tr>
+                        <tr>
+                            <td>19:10 - 20:45</td>
+                            <td></td><td></td>                    
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div>
+                    <table class="table_example">
+                        <tbody>
+                        <tr>
+                            <td rowspan="9" width="30px"><strong>ВТ</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Время</td>
+                            <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                            <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                        </tr>
+                            <tr>
+                                <td>08:30 - 10:05</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:50</td>
+                                <td><i>(лек)</i> <span>Экология</span> <i>515ю</i> <i>Гречушкин&#160;А.&#160;Н.</i></td><td><i>(лек)</i> <span>Экономика часть 1</span> <i>515ю</i> <i>Павлов&#160;В.&#160;А.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>12:00 - 13:35</td>
+                                <td><i>(сем)</i> <span>Экология</span> <i>430</i> <i>Гречушкин&#160;А.&#160;Н.</i></td><td><i>(сем)</i> <span>Экономика часть 1</span> <i>423ю</i> <i>Масленникова&#160;И.&#160;Л.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>13:50 - 15:25</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>15:40 - 17:15</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>17:25 - 19:00</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>19:10 - 20:45</td>
+                                <td></td><td></td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="table_example">
+                        <tbody>
+                        <tr>
+                            <td rowspan="9" width="30px"><strong>СР</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Время</td>
+                            <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                            <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                        </tr>
+                            <tr>
+                                <td>08:30 - 10:05</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:50</td>
+                                <td colspan="2"><i>(лек)</i> <span>Теория систем и системный анализ</span> <i>533</i> <i>Булдакова&#160;Т.&#160;И.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>12:00 - 13:35</td>
+                                <td><i>(сем)</i> <span>Математическая логика  и теория алгоритмов</span> <i>Каф</i> <i>Гуренко&#160;В.&#160;В.</i></td>
+                                <td><i>(лек)</i> <span>Теория систем и системный анализ</span> <i>515ю</i> <i>Булдакова&#160;Т.&#160;И.</i>
+                                </td>                    
+                            </tr>
+                            <tr>
+                                <td>13:50 - 15:25</td>
+                                <td><i>(сем)</i> <span>Математическая логика  и теория алгоритмов</span> <i>423ю</i> <i>Гуренко&#160;В.&#160;В.</i></td>
+                                <td><i>(сем)</i> <span>Математическая логика  и теория алгоритмов</span> <i>533</i> <i>Гуренко&#160;В.&#160;В.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>15:40 - 17:15</td>
+                                <td></td>
+                                <td><i>(сем)</i> <span>Математическая логика  и теория алгоритмов</span> <i>Каф</i> <i>Гуренко&#160;В.&#160;В.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>17:25 - 19:00</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>19:10 - 20:45</td>
+                                <td></td><td></td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="table_example">
+                        <tbody>
+                        <tr>
+                            <td rowspan="9" width="30px"><strong>ЧТ</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Время</td>
+                            <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                            <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                        </tr>
+                            <tr>
+                                <td>08:30 - 10:05</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:50</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>12:00 - 13:35</td>
+                                <td colspan="2"><i></i> <span>Самостоятельная работа</span> <i></i> <i></i></td>                   
+                             </tr>
+                            <tr>
+                                <td>13:50 - 15:25</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>15:40 - 17:15</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>17:25 - 19:00</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>19:10 - 20:45</td>
+                                <td></td><td></td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="table_example">
+                        <tbody>
+                        <tr>
+                            <td rowspan="9" width="30px"><strong>ПТ</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Время</td>
+                            <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                            <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                        </tr>
+                            <tr>
+                                <td>08:30 - 10:05</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:50</td>
+                                <td></td>
+                                <td><i>(лек)</i> <span>Предпринимательство в ИТ</span> <i>424ю</i> <i>Абрамов&#160;Н.&#160;А.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>12:00 - 13:35</td>
+                                <td colspan="2"><i>(лек)</i> <span>Предпринимательство в ИТ</span> <i>424ю</i> <i>Абрамов&#160;Н.&#160;А.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>13:50 - 15:25</td>
+                                <td colspan="2"><i>(лек)</i> <span>Организация ЭВМ и систем</span> <i>Каф</i> <i>Попов&#160;А.&#160;Ю.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>15:40 - 17:15</td>
+                                <td colspan="2"><i>(сем)</i> <span>Организация ЭВМ и систем</span> <i>Каф</i> <i>Попов&#160;А.&#160;Ю.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>17:25 - 19:00</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>19:10 - 20:45</td>
+                                <td></td><td></td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="table_example">
+                        <tbody>
+                        <tr>
+                            <td rowspan="9" width="30px"><strong>СБ</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="20%">Время</td>
+                            <td width="40%" style="background-color: #3E4E96; color: #fff; opacity: 50%;">ЧС</td>
+                            <td width="40%" style="background-color: #2BAC66; color: #fff; opacity: 50%;">ЗН</td>
+                        </tr>
+                            <tr>
+                                <td>08:30 - 10:05</td>
+                                <td colspan="2"><i>(сем)</i> <span>Проектирование информационных систем</span> <i>кк 503</i> <i>Прутик&#160;А.&#160;Ф.</i></td>                   
+                             </tr>
+                            <tr>
+                                <td>10:15 - 11:50</td>
+                                <td colspan="2"><i>(сем)</i> <span>Проектирование информационных систем</span> <i>кк 503</i> <i>Прутик&#160;А.&#160;Ф.</i></td>                    
+                            </tr>
+                            <tr>
+                                <td>12:00 - 13:35</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>13:50 - 15:25</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>15:40 - 17:15</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>17:25 - 19:00</td>
+                                <td></td><td></td>                    
+                            </tr>
+                            <tr>
+                                <td>19:10 - 20:45</td>
+                                <td></td><td></td>                    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
