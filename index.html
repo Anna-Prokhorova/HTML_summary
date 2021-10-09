@@ -28,6 +28,32 @@
             document.getElementById('here').appendChild(ul);
             return ul;
         };
+
+        function example_accesskey(){
+            alert("А вот и я) Приветики)")
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+        function drop(ev) {
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+            var marker = document.createElement("p")
+            if (data == "drag2"){
+                marker.style.color = "#2BAC66";
+                marker.innerHTML = "&#10004;";
+            }
+            else{
+                marker.style.color = "#C03636";
+                marker.innerHTML = "&#10008;";
+            }
+            ev.target.appendChild(marker);
+        }
         </script>
 </head>
 <body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
@@ -62,7 +88,7 @@
                     <tr>
                         <td><a class="chapter" href="#chapter1">Глава 1</a></td>
                         <td><a class="chapter" href="#chapter2">Глава 2</a></td>
-                        <td><a class="chapter" href="#">Глава 3</a></td>
+                        <td><a class="chapter" href="#chapter3">Глава 3</a></td>
                         <td><a class="chapter" href="#">Глава 4</a></td>
                     </tr>
                     <tr>
@@ -159,6 +185,46 @@
                         <p>Тег &lt;textarea&gt;</p>
                         <p>&darr; Тут можно много писать</p>
                         <textarea></textarea>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter3"></a>
+    <section class="container">
+        <h2>Глава 3</h2>
+        <div class="content">
+            <div class="text">В главе 3 описаны атрибуты HTML. Ниже представлены примеры их использования: </div>
+            <div>
+                <ul class="examples_ch3">
+                    <li>
+                        <p>Атрибут accesskey</p>
+                        <p>Вызови алерт, если сможешь</p>
+                        <p>Если ты на Firefox - нажми Alt-Shift+key, 
+                            если на Explorer Chrome, Safari или Opera - нажми Alt+key,</p>
+                        <button accesskey="a" onclick="example_accesskey()">Нажми меня + a</button>
+                    </li>
+                    <li>
+                        <p>Атрибуты contenteditable и spellcheck</p>
+                        <p>Проодолжи строчку известной песни</p>
+                        <p style="padding: 10px; border: 1px solid #3E4E96;;" spellcheck="true" contenteditable="true">Мы вышли из дома, когда ...</p>
+                    </li>
+                    <li>
+                        <p>Атрибут draggable</p>
+                        <p>Проодолжи строчку известной песни</p>
+                        <p>Мы вышли из дома, когда ...</p>
+                        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <p id="drag1" draggable="true" ondragstart="drag(event)">когда захотели, тогда и вышли</p>
+                        <p id="drag2" draggable="true" ondragstart="drag(event)">когда во всех окнах погасли огни</p>
+                        <p id="drag3" draggable="true" ondragstart="drag(event)">когда мама отпустила</p>
+                    </li>
+                    <li>
+                        <p>Атрибут lang</p>
+                        <p>А вот и правильный ответ на разных языках</p>
+                        <p>Мы вышли из дома, когда во всех окнах погасли огни</p>
+                        <p lang="en-GB"> &nbsp We left the house when the lights went out in all the windows</p>
+                        <p lang="fr"> &nbsp Nous avons quitté la maison quand les lumières se sont éteintes à toutes les fenêtres</p>
+                        <p lang="de"> &nbsp Wir verließen das Haus, als in allen Fenstern das Licht ausging</p>
                     </li>
                 </ul>
             </div>
