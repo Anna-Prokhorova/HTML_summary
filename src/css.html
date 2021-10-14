@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!--элемент который помогает браузеру понять как следует интерпретировать страницу-->
+<html lang="en"> <!--Корневой элемент документа, показывает браузеру что дальше будет html-код, ему доступен глобальный атрибут для указания кода языка страницы-->
+<head> <!--в голове вся техническая информация о странице (инструкция по отображению и пользованию страницей)-->
+    <meta charset="UTF-8"> <!--При помощи тега meta можно указывать свойства метаданных, например кодировку-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Или указать в какой версии Eplorer должна отображаться страница-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Или задать видимую область страницы для пользователя-->
+    <meta name="description" content="Конспект html5book"> <!--Или описание сожержимого страницы-->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-css-32x32.png"> <!--при помощи линк можно ссылаться на другие докумнеты, а при помощи атрибута rel указать отношения между ними. например установить фавикон -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles_css.css">
+    <title>CSS summary</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
+</head>
+<body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
+    <div class="nav">
+        <a href="#home">главная</a>
+        <a href="#chapters">содержание</a>
+        <a href="#">обо мне</a>
+        <a href="#">контакты</a>
+    </div>
+    <header>
+        <a name="home"></a>
+        <section class="container">
+        <div class="first_page content_main">
+            <img src="images/banner_css.png" alt="banner">
+            <div class="slogan">
+                <h1>CSS summary</h1>
+                <div>
+                    Привет, меня зовут Аня и это </br>
+                    мой коспект по CSS
+                </div>
+            </div>
+        </div>
+    </section>
+    </header>
+    <main>
+        <a name="chapters"></a>
+        <section class="container">
+        <h2>Содержание</h2>
+        <div>
+            <table class="table_content">
+                <tbody>
+                    <tr>
+                        <td><a class="chapter" href="#chapter1">Глава 1</a></td>
+                        <td><a class="chapter" href="#">Глава 2</a></td>
+                        <td><a class="chapter" href="#">Глава 3</a></td>
+                        <td><a class="chapter" href="#">Глава 4</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 5</a></td>
+                        <td><a class="chapter" href="#">Глава 6</a></td>
+                        <td><a class="chapter" href="#">Глава 7</a></td>
+                        <td><a class="chapter" href="#">Глава 8</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 9</a></td>
+                        <td><a class="chapter" href="#">Глава 10</a></td>
+                        <td><a class="chapter" href="#">Глава 11</a></td>
+                        <td><a class="chapter" href="#">Глава 12</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="chapter" href="#">Глава 13</a></td>
+                        <td><a class="chapter" href="#">Глава 14</a></td>
+                        <td><a class="chapter" href="#">Глава 15</a></td>
+                        <td><a class="chapter" href="#">Глава 16</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        <div>
+            <a style="margin-top: 20px; margin-left: auto; margin-right: auto;" class="chapter" href="index.html">HTML</a>
+        </div>
+        <div>
+            <a style="margin-top: 20px; margin-left: auto; margin-right: auto;" class="chapter" href="hw.html">Homework</a>
+        </div>
+    </section>
+    <a name="chapter1"></a>
+    <section class="container">
+        <h2>Глава 1</h2>
+        <div class="content">
+            <div class="text">Тут пока пусто</div>
+            <div>
+                <ul class="examples_ch1">
+                    <li>
+                        <p>Тут пока пусто</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

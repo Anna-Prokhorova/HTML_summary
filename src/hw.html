@@ -1,0 +1,289 @@
+<!DOCTYPE html> <!--элемент который помогает браузеру понять как следует интерпретировать страницу-->
+<html lang="en"> <!--Корневой элемент документа, показывает браузеру что дальше будет html-код, ему доступен глобальный атрибут для указания кода языка страницы-->
+<head> <!--в голове вся техническая информация о странице (инструкция по отображению и пользованию страницей)-->
+    <meta charset="UTF-8"> <!--При помощи тега meta можно указывать свойства метаданных, например кодировку-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Или указать в какой версии Eplorer должна отображаться страница-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Или задать видимую область страницы для пользователя-->
+    <meta name="description" content="Конспект html5book"> <!--Или описание сожержимого страницы-->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-hw-32x32.png"> <!--при помощи линк можно ссылаться на другие докумнеты, а при помощи атрибута rel указать отношения между ними. например установить фавикон -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles_hw.css">
+    <title>CSS summary</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
+</head>
+<body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
+    <div class="nav">
+        <a href="#home">главная</a>
+        <a href="#chapters">содержание</a>
+        <a href="#">обо мне</a>
+        <a href="#">контакты</a>
+    </div>
+    <header>
+        <a name="home"></a>
+        <section class="container">
+        <div class="first_page content_main">
+            <img src="images/banner_hw.png" alt="banner">
+            <div class="slogan">
+                <h1>Homework</h1>
+                <div>
+                    Привет, меня зовут Аня и это </br>
+                    мои дзшки по HTML и CSS
+                </div>
+            </div>
+        </div>
+    </section>
+    </header>
+    <main>
+        <a name="chapters"></a>
+        <section class="container">
+        <h2>Содержание</h2>
+        <div>
+            <table class="table_content">
+                <tbody>
+                    <tr>
+                        <td><a class="chapter" href="#chapter1">ДЗ 1</a></td>
+                        <td><a class="chapter" href="#">ДЗ 2</a></td>
+                        <td><a class="chapter" href="#">ДЗ 3</a></td>
+                        <td><a class="chapter" href="#">ДЗ 4</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        <div>
+            <a style="margin-top: 20px; margin-left: auto; margin-right: auto;" class="chapter" href="index.html">HTML</a>
+        </div>
+        <div>
+            <a style="margin-top: 20px; margin-left: auto; margin-right: auto;" class="chapter" href="css.html">CSS</a>
+        </div>
+    </section>
+    <a name="chapter1"></a>
+    <section class="container">
+        <h2>ДЗ 1</h2>
+        <div class="content">
+            <div class="text">В дз 1 надо сделать: пример с кастомной стилезацией чекбокса (все состояния), доклад (10 примеров для своей темы), примеры к другим темам докладов</div>
+            <div>
+                <ul class="examples_ch1">
+                    <li>
+                        <p>Пример с кастомной стилизацией чекбокса</p>
+                        <form class="example_checkbox">
+                            <div>
+                                <input type="checkbox" name='test1' id="test1">
+                                <label for="test1" id="test1">Custom Checkbox</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" name='test2' id="test2">
+                                <label for="test2" id="test2">Custom Checkbox</label>
+                            </div>
+
+                            <div>
+                                <input checked type="checkbox" name='test3' id="test3">
+                                <label for="test3" id="test3">Custom Checkbox</label>
+                            </div>
+
+                            <div>
+                                <input disabled type="checkbox" name='test4' id="test4">
+                                <label for="test4" id="test4">Custom Checkbox</label>
+                            </div>
+                        </form>   
+                    </li>
+                    <li>
+                        <p>Примеры для доклада CSS Flexible Box Layout Module отличие от CSS Grid </p>
+                        <p>Flex </p>
+                        <div class="example example1_flex">
+                            <div class="block1"></div>
+                            <div class="block2"></div>
+                            <div class="block3"></div>
+                            <div class="block4"></div>
+                            <div class="block5"></div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example1_grid">
+                            <div class="block1"></div>
+                            <div class="block2"></div>
+                            <div class="block3"></div>
+                            <div class="block4"></div>
+                            <div class="block5"></div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example2_flex">
+                            <div class="block1"></div>
+                            <div class="block2"></div>
+                            <div class="block3"></div>
+                            <div class="block4"></div>
+                            <div class="block5"></div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example2_grid">
+                            <div class="block1"></div>
+                            <div class="block2"></div>
+                            <div class="block3"></div>
+                            <div class="block4"></div>
+                            <div class="block5"></div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example3_flex">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example3_grid">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example4_flex">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example4_grid">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example5_flex">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example5_grid">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example6_flex">
+                            <div class="block1">Text</div>
+                            <ul class="blocks">
+                                <li class="block2">Text</li>
+                                <li class="block3">Text</li>
+                                <li class="block4">Text</li>
+                                <li class="block5">Text</li>
+                            </ul>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example6_grid">
+                            <div class="block1">Text</div>
+                            <ul class="blocks">
+                                <li class="block2">Text</li>
+                                <li class="block3">Text</li>
+                                <li class="block4">Text</li>
+                                <li class="block5">Text</li>
+                            </ul>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example7_grid">
+                            <div class="block1">Text</div>
+                            <div class="block2">Text</div>
+                            <div class="block3">Text</div>
+                            <div class="block4">Text</div>
+                            <div class="block5">Text</div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example7_flex">
+                            <div style="flex: 3;" class="block1">Text</div>
+                            <div style="flex: 2;" class="block2">Text</div>
+                            <div style="flex: 5;" class="block3">Text</div>
+                            <div style="flex: 2;" class="block4">Text</div>
+                            <div style="flex: 3;" class="block5">Text</div>
+                        </div>
+                        <p>Grid </p>
+                        <div class="example example8_grid">
+                            <div class="block1">Text1</div>
+                            <div style="grid-column: 4/5;" class="block2">Text2</div>
+                            <div style="grid-column: 2/3;grid-row: 1;" class="block3">Text3</div>
+                            <div style="grid-column: 5/6;" class="block4">Text4</div>
+                            <div style="grid-column: 3/4;grid-row: 1;"class="block5">Text5</div>
+                        </div>
+                        <p>Flex </p>
+                        <div class="example example8_flex">
+                            <div style="order: 1;" class="block1">Text1</div>
+                            <div style="order: 4;" class="block2">Text2</div>
+                            <div style="order: 2;" class="block3">Text3</div>
+                            <div style="order: 5;" class="block4">Text4</div>
+                            <div style="order: 3;" class="block5">Text5</div>
+                        </div>
+
+                        <p>Flex </p>
+                        <div class="example example9_flex">
+                            <div class="block1">Text1</div>
+                            <div class="block2">Text2</div>
+                            <div class="block3">Text3</div>
+                            <div class="block4">Text4</div>
+                            <div class="block5">Text5</div>
+                        </div>
+                    </li>
+                    <li class="other_examples1">
+                        <p>CSS Комбинаторы</p>
+                        <p>Комбинаторы объясняют отношения между двумя или более селекторами. Примерами комбинаторов являются знак «больше», «плюс» и тильда. Они используются для нацеливания на прямые дочерние и родственные элементы.</p>
+                        <div class="gen-sibling-a">
+                        <p><em>Sibling A</em> абзац над заголовком 2</p>
+                        <h2><em>Sibling A</em> Общий комбинатор потомков</h2>
+                        <p><em>Sibling A</em> абзац под заголовком 2</p>
+                        <h3><em>Sibling A</em>текст заголовка 3</h3>
+                        <p><em>Sibling A</em> абзац, который следует после элемента h2, но они не являются смежными.</p>
+                        <div class="gen-sibling-b">
+                            <p><em>Sibling B</em> абзац</p>
+                            <h2><em>Sibling B</em> h2, который идет после элемента p, общий комбинатор для смежных не работает в обратном направлении.</h2>
+                        </div>
+                        <p><em>Sibling A</em> абзац под заголовком 2</p>
+                        </div>
+
+                        <div class="adjacent">
+                        <h2>Смежный родственный комбинатор</h2>
+                        <div>
+                            <h3>Это элемент заголовка 3.</h3>
+                            <p>Это абзац, смежный с элементом заголовка 3. Селекторы «Соседний родственный» нацелены на элемент «следующий родственный» на странице. Тот, который следует сразу за элементом.</p>
+                            <p>Этот абзац не примыкает к h3.</p>
+                        </div>
+                        </div>
+
+                        <div class="child-comb">
+                        <h2>Дочерний комбинатор</h2>
+                        <a href="#">Оно работает! Это прямой потомок элемента, у которого есть класс child-comb.</a>
+                        <h3>Целевые элементы - только те, которые являются прямыми дочерними элементами других элементов. Он не работает с каждым элементом-потомком <a href="#">например с этим</a>. Только с прямыми потомками!
+                        </h3>
+                        <h3>Комбинатор в дочернем селекторе - это знак «больше».</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <p>CSS псевдоэлементы</p>
+                        <div class="blockquote">Смотря какой fabric, смотря откуда приходит fabric, смотря сколько details в этом пиджаке, так оно very очень очень affordable его дизайн смогут носить любого возраста  любого шейп сайз  хайт и он таймлес </div>
+                        <p>CSS Псевдоклассы</p>
+                        <p>Введи число от 1 до 10</p>
+                        <input class="example_input1" type="number" max="10" min="1" value="51">
+                        <p>Введи email</p>
+                        <input class="example_input2" type="email" value="blabla@test.ru"/>
+                        <p>Введи url</p>
+                        <input class="example_input2" type="url" value="https://ru.wikipedia.org/wiki/URL"/>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
