@@ -111,16 +111,18 @@ p::before {
     padding-right: 40px;
 }
 
-.example_checkbox{
+
+
+.example-checkbox{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.example_checkbox div{
+.checkbox{
     margin-top: 20px;
 }
 
-input[type="checkbox"]{
+.checkbox__item{
     position: absolute;
 	z-index: -1;
 	opacity: 0;
@@ -129,7 +131,7 @@ input[type="checkbox"]{
 	height: 0;
   }
   
-input[type="checkbox"] + label {
+.checkbox__item + .checkbox__text {
    display: inline-block;
    border: 2px solid #E09B9B;
    padding: 8px 20px 8px 45px;
@@ -138,7 +140,7 @@ input[type="checkbox"] + label {
    cursor: pointer;
    color: #E09B9B;
   }
-input[type="checkbox"] + label::after{
+  .checkbox__item + .checkbox__text::after{
     position: absolute;
     content: '';
     opacity: 0.5;
@@ -150,7 +152,7 @@ input[type="checkbox"] + label::after{
     border: 2px solid #E09B9B;
     border-radius: 50%;
 }
-input[type="checkbox"] + label::before{
+.checkbox__item + .checkbox__text::before{
     content: '\2714';
     font-size: 13px;
     position: absolute;
@@ -159,41 +161,44 @@ input[type="checkbox"] + label::before{
     opacity: 0;
 }
   
-input[type="checkbox"]:checked + label{
+.checkbox__item:checked + .checkbox__text{
     box-shadow: 0px 2px 8px 0px rgba(34, 34, 34, 0.41);
     border-color: #E09B9B;
     background: #E09B9B;
     color: #fff;
 }
-input[type="checkbox"]:checked + label::before{
+.checkbox__item:checked + .checkbox__text::before{
     opacity: 1;
     color: #fff;
 }
-input[type="checkbox"]:checked + label::after{
+.checkbox__item:checked + .checkbox__text::after{
     opacity: 1;
     border-color: #fff;
     color: #fff;
 } 
-input[type="checkbox"]:focus + label{
+.checkbox__item:focus + .checkbox__text{
     box-shadow: 0px 2px 8px 0px #E09B9B;
     
 }  
-input[type=checkbox]:focus + label::after{
+.checkbox__item:focus + .checkbox__text::after{
     box-shadow: 0px 2px 8px 0px #E09B9B;
 }
-input[type=checkbox][disabled] + label{
+.checkbox__item[disabled] + .checkbox__text{
     border-color: #c5bebe;
     background: #c5bebe;
     color: #fff;
 }
-input[type=checkbox][disabled] + label::after{
+.checkbox__item[disabled] + .checkbox__text::after{
     border-color: #fff;
 }
-input[type=checkbox][disabled] + label::before{
+.checkbox__item[disabled] + .checkbox__text::before{
     opacity: 1;
     color: #fff;
     content: '\2718';
 }
+
+
+
 
 div.example{
     margin-bottom: 20px;

@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="styles_css.css">
     <title>CSS summary</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
+    <style>
+        .example-block{
+            color: #fff;
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
     <div class="nav">
@@ -41,9 +47,9 @@
                 <tbody>
                     <tr>
                         <td><a class="chapter" href="#chapter1">Глава 1</a></td>
-                        <td><a class="chapter" href="#">Глава 2</a></td>
-                        <td><a class="chapter" href="#">Глава 3</a></td>
-                        <td><a class="chapter" href="#">Глава 4</a></td>
+                        <td><a class="chapter" href="#chapter2">Глава 2</a></td>
+                        <td><a class="chapter" href="#chapter3">Глава 3</a></td>
+                        <td><a class="chapter" href="#chapter4">Глава 4</a></td>
                     </tr>
                     <tr>
                         <td><a class="chapter" href="#">Глава 5</a></td>
@@ -79,11 +85,140 @@
     <section class="container">
         <h2>Глава 1</h2>
         <div class="content">
-            <div class="text">Тут пока пусто</div>
+            <div class="text">В первой главе рассказываются основы css: как подключать таблицы стилей, из чего состоят селекторы, как эти селекторы комбинировать, группировать и как работает наследование. Пробежимся по примерам:</div>
             <div>
-                <ul class="examples_ch1">
+                <ul class="examples_ch">
                     <li>
-                        <p>Тут пока пусто</p>
+                        <p>Приоритет таблиц стилей</p>
+                        <p>Внешняя таблица стилей говорит ему быть красным, внутренняя таблица говорит ему быть белым, но квадрат их не слушает ведь у него есть свой встроенный стиль, который говорит ему быть зеленым. Но встроенный стиль не говорит квадрату какого цвета должен быть шрифт внутри него и так как приоритет квадрат отдает внутренней таблице, а не внешней шрифт у него белый, а не красный. И только по части своего размера, размера шрифта и внешнего отступа квадрат слушает внешнюю таблицу</p>
+                        <div class="example-block" style="background-color: #AAD2BC;">Это зеленый квадрат</div>
+                    </li>
+                    <li>
+                        <p>Виды селекторов</p>
+                        <p>Все эти квадраты вообще-то белые по внутренней таблице стилей, но тут мы ее всячески перебиваем внешней таблицей</p>
+                        <div class="blocks">
+                            <div id="first-block" class="example-block"></div>
+                            <div class="example-block _blue"></div>
+                            <div class="example-block _green"></div>
+                            <div class="example-block"></div>
+                            <div class="example-block"></div>
+                            <div class="example-block"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Наследование и каскад</p>
+                        <div class="example-text">
+                            <span id="example-text-p"><p>Я в своем познании настолько <b>преисполнился</b>, что я как будто бы уже сто <i>триллионов миллиардов лет проживаю на триллионах и триллионах таких же планет,</i> 
+                            как эта Земля, мне этот мир абсолютно понятен, и я здесь ищу только одного - <b>покоя</b>, умиротворения и вот этой гармонии, от <i>слияния с бесконечно вечным</i>, 
+                            от созерцания великого фрактального подобия и от вот этого замечательного всеединства существа, бесконечно вечного, куда ни посмотри, хоть вглубь – бесконечно малое, 
+                            хоть ввысь - бесконечное большое, понимаешь? А ты мне опять со своим вот этим, иди суетись дальше, это твоё распределение, это твой путь и твой горизонт познания и ощущения твоей природы, 
+                            он несоизмеримо мелок по сравнению с моим, понимаешь?</p></span>
+                            <span class="decor">Я как будто бы уже давно глубокий <b>старец</b>, бессмертный, ну или там уже почти бессмертный, который на этой планете от её самого зарождения, 
+                            ещё когда только Солнце только-только сформировалось как звезда, и вот это газопылевое облако, вот, после взрыва, Солнца, когда оно вспыхнуло, как звезда, начало формировать вот эти коацерваты, 
+                            планеты, понимаешь, я на этой Земле уже как будто почти пять миллиардов лет живу и знаю её вдоль и поперёк этот весь мир, а ты мне какие-то...</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter2"></a>
+    <section class="container">
+        <h2>Глава 2</h2>
+        <div class="content">
+            <div class="text">Во второй главе рассказывается о блочной моделе css: внутренние и внешние отступы, рамки и контент</div>
+            <div>
+                <ul class="examples_ch">
+                    <li>
+                        <p>Пример элемента-блока</p>
+                        <p>У внешнего контейнера есть внутренние отсупы и нет внешних, у внутреннего есть внешние, но нет внутренних</p>
+                        <div style="border: 3px solid #000; padding: 50px 0px;">
+                            <div class="example-block-2"> Content </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Тут добавили второй блок и можем наблюдать как схлопнулись внешние отсупы</p>
+                        <div style="border: 3px solid #000; padding: 50px 0px;">
+                            <div class="example-block-2 _botmar"> Content </div>
+                            <div class="example-block-2  _topmar"> Content </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Во всем документе для удобства установоен border-box, но вот для сравнения как выглядит content-box</p>
+                        <div style="border: 3px solid #000; padding: 50px 0px;">
+                            <div class="example-block-3 _botmar"> Content </div>
+                            <div class="example-block-3 _topmar _conbox"> Content </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter3"></a>
+    <section class="container">
+        <h2>Глава 3</h2>
+        <div class="content">
+            <div class="text">Примеры не придумала потом придумаю</div>
+            <div>
+                <ul class="examples_ch">
+                    <li>
+                        <p>Пуста-капуста</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter4"></a>
+    <section class="container">
+        <h2>Глава 4</h2>
+        <div class="content">
+            <div class="text">В главе 4 все (почти) про позиционирование</div>
+            <div>
+                <ul class="examples_ch">
+                    <li>
+                        <p>Примеры на все позишены</p>
+                        <p>Sticky</p>
+                        <div class="example-sticky">
+                            <nav class="mini-nav">NAVBAR</nav>
+                            <header class="mini-header">HEADER</header>
+                            <main class="mini-main">MAIN</main>
+                            <aside class="mini-aside">SIDEBAR</aside>
+                            <section class="mini-section">SECTION</section>
+                            <footer class="mini-footer">FOOTER</footer>
+                        </div>
+                        <p>Absolute</p>
+                        <p>квадрат с позицией Absolute вышел из потока, а значит и из своего контейнера, но позиционируется относительно него, ведь у него мы добавили позишн relative. Контейнер выживает на одних паддингах</p>
+                        <div style="border: 3px solid #000; padding: 200px 0px; position: relative;">
+                            <div class="example-block-2 _absolute"> Content </div>
+                        </div>
+                        <p>Relative</p>
+                        <p>квадрат с позицией Relative позиционируется относительно своего обычного положения в потоке, смещен на 200px вниз и вправо (при этом в отличие от абсолют место отведенное под блок сохранилось и контейнер чувствует себя нормально)</p>
+                        <div style="border: 3px solid #000; padding: 200px 0px; position: relative;">
+                            <div class="example-block-2 _relative"> Content </div>
+                        </div>
+                        <p>Fixed</p>
+                        <p>а где собственно квадрат? А он сбежал из контейнера, вышел из потока и мы его наказали при помощи "visibility: hidden;" (чтобы временно отменить наказание - иди в отладчиик). Позишн фиксд это как глупый позишн стики, потому что позишн стики знает свое место и сидит внутри контейнера как положено, а позишн фиксд наглым образом позиционируется относительно вьюпорта (за исключением случаев, когда один из его предков имеет свойство transform, perspective, или filter, установленное на что-то иное, кроме none)</p>
+                        <div style="border: 3px solid #000; padding: 200px 0px; position: relative;">
+                            <div class="example-block-2 _fixed"> Content </div>
+                        </div>
+                        <p>Хаха! Попался! Тут мы провернули трюк для поимки квадрата, который сбежал в прошлый раз. Повернули контейнер на 360 и квадрат теперь как будто с позишн абсолют</p>
+                        <div style="border: 3px solid #000; padding: 200px 0px; transform: rotate(360deg);">
+                            <div class="example-block-2 _fixed _cansee"> Content </div>
+                        </div>
+                        <p>Static</p>
+                        <p>Тут все скучно (даже квадраты тратить не хочется). Статик это дефолтное позиционарование, тут даже top, left, bottom, right и z-index не задашь...</p>
+                    </li>
+                    <li>
+                        <p>Z-index</p>
+                        <div style="border: 3px solid #000; padding: 200px 0px; position: relative;">
+                            <div style="top: 0px; left: 0px; z-index: 2; background-color: #4AA071;" class="example-block-2 _absolute"> Content </div>
+                            <div style="top: 50px; left: 50px; z-index: 1; background-color: #FCDCDF;" class="example-block-2 _absolute"> Content </div>
+                            <div style="top: 100px; left: 100px; z-index: 0; background-color: #FFCBA9;" class="example-block-2 _absolute"> Content </div>
+                            <div style="top: 0px; left: 350px; z-index: 0; background-color: #4AA071;" class="example-block-2 _absolute"> Content </div>
+                            <div style="top: 50px; left: 400px; z-index: 1; background-color: #FCDCDF;" class="example-block-2 _absolute"> Content </div>
+                            <div style="top: 100px; left: 450px; z-index: 0; background-color: #FFCBA9;" class="example-block-2 _absolute"> Content </div>
+                        </div>
+                        
                     </li>
                 </ul>
             </div>

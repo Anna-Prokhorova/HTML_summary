@@ -66,25 +66,25 @@
                 <ul class="examples_ch1">
                     <li>
                         <p>Пример с кастомной стилизацией чекбокса</p>
-                        <form class="example_checkbox">
-                            <div>
-                                <input type="checkbox" name='test1' id="test1">
-                                <label for="test1" id="test1">Custom Checkbox</label>
+                        <form class="example-checkbox"> <!--блок-->
+                            <div class="checkbox"> <!--блок-->
+                                <input class="checkbox__item" type="checkbox" name='test1' id="test1" > <!--элемент-->
+                                <label  class="checkbox__text" for="test1" id="test1">Custom Checkbox</label><!--элемент-->
                             </div>
 
-                            <div>
-                                <input type="checkbox" name='test2' id="test2">
-                                <label for="test2" id="test2">Custom Checkbox</label>
+                            <div class="checkbox"> <!--блок-->
+                                <input  class="checkbox__item" type="checkbox" name='test2' id="test2"><!--элемент-->
+                                <label  class="checkbox__text" for="test2" id="test2">Custom Checkbox</label><!--элемент-->
                             </div>
 
-                            <div>
-                                <input checked type="checkbox" name='test3' id="test3">
-                                <label for="test3" id="test3">Custom Checkbox</label>
+                            <div class="checkbox"> <!--блок-->
+                                <input  class="checkbox__item" checked type="checkbox" name='test3' id="test3"><!--элемент-->
+                                <label class="checkbox__text" for="test3" id="test3">Custom Checkbox</label><!--элемент-->
                             </div>
 
-                            <div>
-                                <input disabled type="checkbox" name='test4' id="test4">
-                                <label for="test4" id="test4">Custom Checkbox</label>
+                            <div class="checkbox"> <!--блок-->
+                                <input  class="checkbox__item" disabled type="checkbox" name='test4' id="test4"><!--элемент -->
+                                <label class="checkbox__text" for="test4" id="test4">Custom Checkbox</label><!--элемент-->
                             </div>
                         </form>   
                     </li>

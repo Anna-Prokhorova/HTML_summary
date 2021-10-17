@@ -72,13 +72,13 @@ h2{
     transition: linear 0.2s;
     padding-top: 8px;
 }
-.examples_ch1 li{
+.examples_ch li{
     padding: 30px;
 }
-.examples_ch1 li p{
-    padding-bottom: 10px;
+.examples_ch li p{
+    padding: 20px 0px;
 }
-.examples_ch1 li::marker{
+.examples_ch li::marker{
     color: #4AA071;
     font-size: 1.5em;
     content: "\2749";
@@ -95,6 +95,7 @@ h2{
     background-color: #AAD2BC;
     opacity: 0.9;
     padding: 15px;
+    z-index: 100;
 }
 .nav a{
     text-decoration: none;
@@ -106,4 +107,168 @@ h2{
 }
 p::before {
     padding-right: 40px;
+}
+
+.example-block{
+    width: 100px;
+    height: 100px;
+    color: red;
+    background-color: red;
+    margin: auto;
+    font-size: small;
+}
+.blocks{
+    display: flex;
+}
+.example-block:empty{
+    background-color: #FCDCDF;
+}
+#first-block{
+    background-color: #E4C5E4;
+}
+._blue{
+    background-color: #B4E8FE!important}
+
+.example-block:last-child{
+    background-color: #FFCBA9;
+}
+.example-block[class~="_green"]{
+    background-color: #CFF6DB;
+}
+.blocks .example-block:nth-child(4){
+    background-color: #FFFBB2;
+}
+
+.example-text{
+    color: #4AA071;
+}
+.example-text > span:last-child{
+    color: #FFCBA9;
+}
+.example-text b + i{
+    color:#B4E8FE;
+}
+.example-text b{
+    color: #E4C5E4;
+}
+b{
+    color: #FFFBB2; /*не выйдет у верхнего селектора специыичность больше*/
+    text-decoration: underline;
+}
+.example-text .decor{
+    text-decoration: overline;
+}
+.decor{
+    text-decoration:underline;/*не выйдет у верхнего селектора специыичность больше*/
+}
+span p::first-letter{
+    color: red;
+    font-weight: bold; /*не выйдет у нижнего селектора специыичность больше*/
+}
+.example-text span p::first-letter{
+    color: #fff;
+    font-weight: bold; /*не выйдет у нижнего селектора специыичность больше*/
+}
+
+#example-text-p p::first-letter{
+    color: #000;
+    font-weight: bold;
+}
+
+.example-block-2{
+    width: 200px;
+    height: 200px;
+    background-color: #FFCBA9;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+.example-block-3{
+    width: 200px;
+    height: 200px;
+    background-color: #FFCBA9;
+    border: 3px solid #000;
+    padding: 50px;
+    margin: 0px auto;
+}
+._topmar{
+    margin-top: 20px;
+}
+
+._botmar{
+    margin-bottom: 20px;
+}
+
+._conbox{
+    box-sizing: content-box;
+}
+
+.example-sticky{
+    overflow: scroll;
+    height: 300px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header"
+    "sidebar main main"
+    "sidebar section section"
+    "footer footer footer";
+}
+.mini-nav{
+    position:sticky;
+    grid-area: nav;
+    top: 0;
+    background-color: #4AA071;
+    height: 50px;
+}
+.mini-header{
+    grid-area: header;
+    background-color: #FFCBA9;
+    height: 100px;
+}
+.mini-main{
+    grid-area: main;
+    background-color: #FFCBA9;
+    height: 50px;
+}
+.mini-aside{
+    grid-area: sidebar;
+    background-color: #FFCBA9;
+    height: 120px;
+}
+.mini-section{
+    grid-area: section;
+    background-color: #FFCBA9;
+    height: 50px;
+}
+.mini-footer{
+    grid-area: footer;
+    background-color: #FFCBA9;
+    height: 100px;
+}
+._absolute{
+    position: absolute;
+    top: 2px;
+    left: 5px;
+
+}
+
+._relative{
+    position: relative;
+    top:200px;
+    left: 200px;
+
+}
+
+._fixed{
+    position: fixed;
+    top: 50px;
+    left: 5px;
+    visibility: hidden;
+}
+._cansee{
+    visibility: visible;
 }
