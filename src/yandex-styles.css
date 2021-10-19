@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-width: 1000px;
+    font: 81.25% Arial,Helvetica,'Helvetica Neue',sans-serif;
+    color: #000;
+    background: 0 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+.headline{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 200px 0px 0px;
+    padding: 0 6px 0 20px;
+}
+
+.icon{
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.icon ._cart, .icon ._bell{
+    width: 24px;
+    height: 24px;
+}
+
+.headline__right{
+    display: flex;
+}
+
+.headline__left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.city{
+    padding: 0px 16px 0px 20px;
+    position: relative;
+}
+
+.city::before{
+    content: '';
+    background-image: url(images/right-arrow.png);
+    background-size: contain;
+    position: absolute;
+    top: 2px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+}
+
+.time{
+    padding-right: 24px;
+}
+
+.side{
+    position: absolute;
+    top: 6px;
+    right: 0;
+    height: 300px;
+}
+
+.side__card{
+    position: relative;
+    margin-right: 6px;
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgba(0,0,0,.08);
+    box-sizing: border-box;
+    width: 180px;
+    padding: 12px 14px;
+    transition: transform .15s ease-out 50ms,margin .1s .4s,visibility .1s .4s;
+    background: #fff;
+    height: 100px;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin: 5px 200px 0px 0px;
+    padding-left: 40px;
+}
+
+.news{
+    width: 604px;
+    height: 184px;
+    background-color: rgb(224, 178, 178);
+}
+
+.weather{
+    width: 290px;
+    height: 68px;
+    background-color: rgb(224, 219, 149);
+    padding-left: 20px;
+}
+.road{
+    width: 290px;
+    height: 72px;
+    background-color: rgb(166, 213, 216);
+    padding-left: 20px;
+}
+.list{
+    height: 60px;
+    /* overflow: hidden; */
+    /* flex-wrap: nowrap; */
+    /* flex: 1 1 auto; */
+    padding: 5px;
+    /* margin: -5px; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    /* padding-right: 178px; */
+    /* margin: auto; */
+    /* align-self: auto; */
+    text-align: center;
+    margin: 5px 200px 0px 0px;
+    padding-left: 40px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.list__icon{
+    width: 44px;
+    height: 44px;
+    background-color: rgb(220, 193, 144);
+    margin: auto;
+}
