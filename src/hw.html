@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-hw-32x32.png"> <!--при помощи линк можно ссылаться на другие докумнеты, а при помощи атрибута rel указать отношения между ними. например установить фавикон -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="styles_hw.css">
-    <title>CSS summary</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
+    <title>HW</title> <!--Заголовок страницы (виден в строке заголовка браузера)-->
 </head>
 <body> <!--в теле документа - все содержимое документа (то, что будет отображаться по правилам написаным в голове)-->
     <div class="nav">
@@ -41,7 +41,7 @@
                 <tbody>
                     <tr>
                         <td><a class="chapter" href="#chapter1">ДЗ 1</a></td>
-                        <td><a class="chapter" href="#">ДЗ 2</a></td>
+                        <td><a class="chapter" href="#chapter2">ДЗ 2</a></td>
                         <td><a class="chapter" href="#">ДЗ 3</a></td>
                         <td><a class="chapter" href="#">ДЗ 4</a></td>
                     </tr>
@@ -63,7 +63,7 @@
         <div class="content">
             <div class="text">В дз 1 надо сделать: пример с кастомной стилезацией чекбокса (все состояния), доклад (10 примеров для своей темы), примеры к другим темам докладов</div>
             <div>
-                <ul class="examples_ch1">
+                <ul class="examples_ch">
                     <li>
                         <p>Пример с кастомной стилизацией чекбокса</p>
                         <form class="example-checkbox"> <!--блок-->
@@ -276,6 +276,125 @@
                         <p>Введи url</p>
                         <input class="example_input2" type="url" value="https://ru.wikipedia.org/wiki/URL"/>
                         
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <a name="chapter2"></a>
+    <section class="container">
+        <h2>ДЗ 2</h2>
+        <div class="content">
+            <div class="text">В дз 2 надо сделать: пример на выпадение вертикальных отступов, доклад про "как скрыть элемент"</div>
+            <div>
+                <ul class="examples_ch">
+                    <li>
+                        <p>Пример на выпадение вертикальных отступов</p>
+                        <p>Если в родительском блоке нет границ или padding-top, то при задании вложенному в него блоку margin-top происходит выпадение: т.е. дочерний блок сливается своим верхним краем с верхним краем родителя.</p>
+                        <p>Тут заданы грацы и все хорошо</p>
+                        <div style="border: 3px solid #000;">
+                            <div class="ch2_example_block"></div>
+                        </div>
+                        <p>Тут задан padding-top и тоже все хорошо</p>
+                        <div style="padding-top: 1px; background-color: #ffa9a9;">
+                            <div class="ch2_example_block"></div>
+                        </div>
+                        <p>А вот тут отступ выпал</p>
+                        <div style="background-color: #ffa9a9;">
+                            <div class="ch2_example_block"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Как прятать элементы?</p>
+                        <p>Будем прятать ссылки. Для начала самый очевидный способ display: none;</p>
+                        <p>Такой способ удоляет элемент со страницы полностью. Элемент не видно на странице и соседние блоки про него ничего не знают. Его даже скринридеры игоририруют и не читают содержимое</p>
+                        <div style="border: 3px solid #000; display: flex; justify-content: space-evenly; padding: 20px 0px; margin-bottom: 20px;">
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link" style="display: none;">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                        </div>
+                        <p>Следующий способ это visibility: hidden</p>
+                        <p>В отличии от предыдущего способа элемент вроде здесь и соседние блоки его чувствуют, но его не видно. При этом с ссылкой все еще нельзя взаимодействовать</p>
+                        <div style="border: 3px solid #000; display: flex; justify-content: space-evenly; padding: 20px 0px; margin-bottom: 20px;">
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link" style="visibility: hidden;">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                        </div>
+                        <p>Мой личный любимец: opacity: 0</p>
+                        <p>Opacity просто делает элемент прозрачным. Ссылка пропала, место под нее сохранилось и даже кликнуть по ней можно</p>
+                        <div style="border: 3px solid #000; display: flex; justify-content: space-evenly; padding: 20px 0px; margin-bottom: 20px;">
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                            <div>
+                                <a class="ch2_example_link">Link 1</a>
+                                <a href="#chapters" class="ch2_example_link" style="opacity: 0;">Link 2</a>
+                                <a class="ch2_example_link">Link 3</a>
+                            </div>
+                        </div>  
+                        <p>И еще немного про способы:</p>      
+                        <p>Если нам надо скрыть элемент, укоторого есть дети посмотрим что будет... все справились</p>  
+                        <div style="border: 3px solid #000; display: flex; justify-content: space-evenly; padding: 20px 0px; margin-bottom: 20px;">
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; display: none;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; visibility: hidden;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; opacity: 0;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636;"></div>
+                                </div>
+                            </div>
+                        </div>    
+                        <p>А если надо скрыть сам элемент, а детей не трогать... справился только visibility</p>  
+                        <div style="border: 3px solid #000; display: flex; justify-content: space-evenly; padding: 20px 0px; margin-bottom: 20px;">
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; display: none;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9; display: block;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636; display: block;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; visibility: hidden;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9; visibility: visible;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636; visibility: visible;"></div>
+                                </div>
+                            </div>
+                            <div style="height: 100px; width: 100px; background-color: #CFF6DB; opacity: 0;">
+                                <div style="height: 50px; width: 50px; background-color: #ffa9a9; opacity: 1;">
+                                    <div style="height: 10px; width: 10px; background-color: #C03636; opacity: 1;"></div>
+                                </div>
+                            </div>
+                        </div>            
                     </li>
                 </ul>
             </div>

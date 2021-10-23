@@ -72,13 +72,13 @@ h2{
     transition: linear 0.2s;
     padding-top: 8px;
 }
-.examples_ch1 li{
+.examples_ch li{
     padding: 30px;
 }
-.examples_ch1 li p{
+.examples_ch li p{
     padding-bottom: 10px;
 }
-.examples_ch1 li::marker{
+.examples_ch li::marker{
     color: #C03636;
     font-size: 1.5em;
     content: "\2749";
@@ -131,7 +131,7 @@ p::before {
 	height: 0;
   }
   
-.checkbox__item + .checkbox__text {
+.checkbox__text {
    display: inline-block;
    border: 2px solid #E09B9B;
    padding: 8px 20px 8px 45px;
@@ -140,7 +140,7 @@ p::before {
    cursor: pointer;
    color: #E09B9B;
   }
-  .checkbox__item + .checkbox__text::after{
+  .checkbox__text::after{
     position: absolute;
     content: '';
     opacity: 0.5;
@@ -152,7 +152,7 @@ p::before {
     border: 2px solid #E09B9B;
     border-radius: 50%;
 }
-.checkbox__item + .checkbox__text::before{
+.checkbox__text::before{
     content: '\2714';
     font-size: 13px;
     position: absolute;
@@ -485,4 +485,24 @@ div.example{
 } 
 .example_input2, .example_input1{
     margin-bottom: 20px;
+}
+
+.ch2_example_block {
+    height: 100px;
+    width: 100px;
+    background-color: #C03636;
+    margin-top: 100px;
+}
+.ch2_example_link {
+    display: block;
+    background-color: #C03636;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+.ch2_example_link:hover {
+    background-color: #9a2c2c;
+    transition: 0.2 linear;
 }

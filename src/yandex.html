@@ -8,74 +8,385 @@
     <link rel="stylesheet" href="yandex-styles.css">
 </head>
 <body>
-    <div class="wrap">
+<div class="wrap">
 
-    
    <div class="headline">
-       <div class="headline__left">
-           <span class="city">Москва</span>
-           <span class="date">19 октября, вторник &nbsp;</span>
-           <span class="time"> 02:00</span>
+       <div class="headline__geo">
+           <span class="headline__city">Москва</span>
+           <span class="headline__date">19 октября, вторник &nbsp;</span>
+           <span class="headline__time"> 02:00</span>
        </div>
-       <div class="headline__right">
-           <div class="icon"><img class="_cart" src="images/shopping-cart.png"></div>
-           <div class="icon"><img class="_bell" src="images/bell-ring.png"></div>
+       <div class="headline__icons">
+           <div class="headline__icon _cart"></div>
+           <div class="headline__icon _bell"></div>
        </div>
    </div>
-
-   <div class="side">
-        <div class="side__card"></div>
-        <div class="side__card"></div>
-        <div class="side__card"></div>
-   </div>
-
-    <div class="main">
-        <div class="news">news</div>
-        <div>
-            <div class="weather">weather</div>
-        <div class="road">road</div>
+   
+   <div class="cards">
+        <div class="card-container">
+            <div class="card">
+                <div class="card-main">
+                    <div class="card__title">
+                        <a class="card__username">Персик Котович</a>
+                        <a>
+                            <div class="card__user-icon"></div>
+                        </a>
+                    </div>
+                    <div class="card__details">
+                        <a class="card__details-item link _regular">
+                            <div class="card__details-item-title">Почта</div>
+                            <div class="card__details-item-value">14</div>
+                        </a>
+                        <a class="card__details-item link _regular">
+                            <div class="card__details-item-title">Диск</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-plus">
+                    <div class="card-plus__icon">
+        
+                    </div>
+                    <div class="card-plus__title">
+                        300 баллов в Плюсе
+                    </div>
+                    <div class="card-plus__button">
+                        Активировать
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-corona">
+                    <div class="card-corona__content">
+                        <div class="card-corona__title">
+                            Коронавирус в России
+                        </div>
+                        <div class="card-corona__details">
+                            <span class="card-corona__text"><span class="card-corona__number">+36339</span> выявлено</span>
+                            <div class="card-corona__graph"></div>
+                        </div>
+                    </div>
+                    <a class="card-corona__button">
+                        <span class="card-corona__info-icon"></span>
+                        О вакцинации
+                    </a>
+                </div>
+            </div>
         </div>
    </div>
-   <div class="menu">
-       <ul class="list">
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Market</div>
-    </li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Video</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Pictures</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>News</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Maps</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Translator</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Music</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Translator</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>Music</div></li>
-    <li class="list__item">
-        <div class="list__icon"></div>
-        <div>More</div></li>
-</ul>
+
+   <div class="container">
+        <div class="main">
+            <div class="news widget">
+                <div class="news-head">
+                    <h1 class="news-head__item">
+                        <a class="news-head__link link">
+                            <span class="news-head__text">Сейчас в СМИ</span>
+                        </a>
+                    </h1>
+                    <h1 class="news-head__item">
+                        <a class="news-head__link link _light">
+                            <span class="news-head__text">в Москве</span>
+                        </a>
+                    </h1>
+                    <h1 class="news-head__item">
+                            <a class="news-head__link link _light">
+                                <span class="news-head__text">Интересное</span>
+                            </a>
+                    </h1>
+                    <span class="news-head__text">
+                        <a class="news-head__link link _danger">
+                            Короновирус
+                        </a>
+                    </span>
+                </div>
+                <ul class="news-list">
+                    <li class="news-list__item">
+                        <a class="news__link link">
+                            <div class="news-list__icon" style="background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3808423/pub_616deff87b4d25470d2c9b10_616df96d7851f821c98d1f44/scale_1200);"></div>
+                            <span class="news-list__text">Путин поддержал введение нерабочих дней в РФ с 30 октября по 7 ноября</span>
+                        </a>
+                    </li>
+                    <li class="news-list__item">
+                        <a class="news__link link">
+                            <div class="news-list__icon" style="background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3808423/pub_616deff87b4d25470d2c9b10_616df96d7851f821c98d1f44/scale_1200);"></div>
+                            <span class="news-list__text">Путин поддержал введение нерабочих дней в РФ с 30 октября по 7 ноября</span>
+                        </a>
+                    </li>
+                    <li class="news-list__item">
+                        <a class="news__link link">
+                            <div class="news-list__icon" style="background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3808423/pub_616deff87b4d25470d2c9b10_616df96d7851f821c98d1f44/scale_1200);"></div>
+                            <span class="news-list__text">Путин поддержал введение нерабочих дней в РФ с 30 октября по 7 ноября</span>
+                        </a>
+                    </li>
+                    <li class="news-list__item">
+                        <a class="news__link link">
+                            <div class="news-list__icon" style="background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3808423/pub_616deff87b4d25470d2c9b10_616df96d7851f821c98d1f44/scale_1200);"></div>
+                            <span class="news-list__text">Путин поддержал введение нерабочих дней в РФ с 30 октября по 7 ноября</span>
+                        </a>
+                    </li>
+                    <li class="news-list__item">
+                        <a class="news__link link">
+                            <div class="news-list__icon" style="background-image: url(https://avatars.mds.yandex.net/get-zen_doc/3808423/pub_616deff87b4d25470d2c9b10_616df96d7851f821c98d1f44/scale_1200);"></div>
+                            <span class="news-list__text">Путин поддержал введение нерабочих дней в РФ с 30 октября по 7 ноября</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="news-stocks">
+                    <div class="news-stocks__item" data-title="курс MOEX на 20/10 23:41">
+                        <a class="news-stocks__link link">
+                            usd
+                        </a>
+                        <span class="news-stocks__value">
+                            70.84
+                        </span>
+                        <span class="news-stocks__change">
+                            -0.7
+                        </span>
+                    </div>
+                    <div class="news-stocks__item" data-title="курс MOEX на 20/10 23:41">
+                        <a class="news-stocks__link link">
+                            eur
+                        </a>
+                        <span class="news-stocks__value">
+                            82.52
+                        </span>
+                        <span class="news-stocks__change">
+                            +0.02
+                        </span>
+                    </div>
+                    <div class="news-stocks__item" data-title="цена на 20/10 23:41">
+                        <a class="news-stocks__link link">
+                            нефть
+                        </a>
+                        <span class="news-stocks__value">
+                            85.86
+                        </span>
+                        <span class="news-stocks__change">
+                            +0.95%
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="weather-traffic">
+                <!--Weather block-->
+                <div class="weather widget">
+                    <div class="weather-header">
+                        <h1 class="weather-header__title link">Погода</h1>
+                        <a class="weather-header__link link">Карта осадков</a>
+                    </div>
+                    <div class="weather-content">
+                        <a class="weather-content__link link _regular">
+                            <div class="weather-content__icon"></div>
+                            <div class="weather-content__temp">
+                                +9°
+                            </div>
+                        </a>
+                        <div class="weather-forecast">
+                            <a class="weather-forecast__item link _regular">
+                                <span class="weather-forecast__text text _gray">
+                                    Ночью
+                                </span>
+                                <span class="weather-forecast__icon">
+
+                                </span>
+                                <span class="weather-forecast__temp">
+                                    10°
+                                </span>
+                            </a>
+                            <a class="weather-forecast__item link _regular">
+                                <span class="weather-forecast__text text _gray">
+                                    Утром
+                                </span>
+                                <span class="weather-forecast__icon">
+
+                                </span>
+                                <span class="weather-forecast__temp">
+                                    13°
+                                </span>
+                            </a>
+                            <a class="weather-forecast__item link _regular">
+                                <span class="weather-forecast__text text _gray">
+                                    Днем
+                                </span>
+                                <span class="weather-forecast__icon">
+
+                                </span>
+                                <span class="weather-forecast__temp">
+                                    13°
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Traffic block-->
+                <div class="traffic widget">
+                    <div class="traffic-header">
+                        <h1 class="traffic-header__title link">
+                            Пробки
+                        </h1>
+                        <a class="traffic-header__link link">
+                            Метро
+                        </a>
+                        <a class="traffic-header__link link">
+                            Расписания
+                        </a>
+                        <a class="traffic-header__link link">
+                            Такси
+                        </a>
+                    </div>
+                    <div class="traffic-content">
+                        <a class="traffic-content__link link _regular">
+                            <div class="traffic-content__icon">
+
+                            </div>
+                            <div class="traffic-content__grade">
+                                1
+                            </div>
+                        </a>
+                        <div class="traffic-forecast">
+                            <a class="traffic-forecast__link link _regular">
+                                До конца дня дороги свободны
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
    </div>
-   <div class="search">
-       <form class="search-item">
-        <input>
-        <button>Search</button>
-       </form>
+   <div class="container">
+        <div class="menu">
+            <ul class="menu-main">
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular"> 
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-main__link link _regular">
+                        <div class="menu-main__icon">
+        
+                        </div>
+                        <div class="menu-main__title">
+                            Маркет
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-main__item">
+                    <a class="menu-more link _regular">
+                        <div class="more-icons">
+                            <div class="more-icons__item">
+                
+                            </div>
+                            <div class="more-icons__item">
+                                
+                            </div>
+                            <div class="more-icons__item">
+                                
+                            </div>
+                            <div class="more-icons__item">
+                                
+                            </div>
+                        </div>
+                        <div class="menu-more__title">
+                            еще
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+   </div>
+   <div class="container">
+        <form class="search">
+            <div class="logo"></div>
+            <div class="search__input">
+                <input class="search__text" type="text" name="search_input" placeholder="Найдется все">
+            </div>
+            <button class="search__button">Найти</button>
+        </form>
    </div>
 </div>
 </body>
